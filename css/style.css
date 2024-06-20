@@ -1,34 +1,41 @@
+:root {
+  --clock-size: clamp(15.625rem, 60vmin, 31.25rem);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .clock {
-  border: 8px solid black;
+  border: calc(var(--clock-size) / 80) solid black;
   border-radius: 50%;
-  width: 400px;
-  height: 400px;
+  width: var(--clock-size);
+  height: var(--clock-size);
   position: relative;
 }
 
-.clock__hours {
-  width: 10px;
-  height: 90px;
-  background: black;
-}
-
-.clock__minutes {
-  width: 7px;
-  height: 130px;
-  background-color: black;
-}
-
-.clock__seconds {
-  width: 4px;
-  height: 160px;
-  background-color: black;
-}
-
-.clock__hours,
-.clock__minutes,
-.clock__seconds {
+.clock__hand {
+  width: calc(var(--clock-size) / 60);
   position: absolute;
   bottom: 50%;
   left: 50%;
   transform-origin: bottom;
+}
+
+.clock__hand_hours {
+  height: calc(var(--clock-size) / 5);
+  background: black;
+}
+
+.clock__hand_minutes {
+  height: calc(var(--clock-size) / 3);
+  background-color: black;
+}
+
+.clock__hand_seconds {
+  height: calc(var(--clock-size) / 2.5);
+  background-color: black;
 }
