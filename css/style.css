@@ -7,10 +7,12 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: rgb(148, 157, 92);
+  background: radial-gradient(circle, rgba(148, 157, 92, 1) 0%, rgba(0, 0, 0, 1) 55%);
 }
 
 .clock {
-  border: calc(var(--clock-size) / 80) solid black;
+  border: calc(var(--clock-size) / 100) solid white;
   border-radius: 50%;
   width: var(--clock-size);
   height: var(--clock-size);
@@ -23,19 +25,17 @@
   bottom: 50%;
   left: 50%;
   transform-origin: bottom;
+  background: white;
 }
 
 .clock__hand_hours {
   height: calc(var(--clock-size) / 5);
-  background: black;
 }
 
 .clock__hand_minutes {
   height: calc(var(--clock-size) / 3);
-  background-color: black;
 }
 
 .clock__hand_seconds {
   height: calc(var(--clock-size) / 2.5);
-  background-color: black;
 }
