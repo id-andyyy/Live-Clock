@@ -1,0 +1,40 @@
+.clock {
+  border: 8px solid black;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+.clock__hours {
+  width: 10px;
+  height: 90px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  transform-origin: bottom;
+}
+
+.clock__minutes {
+  width: 7px;
+  height: 130px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  transform-origin: bottom;
+}
+
+.clock__seconds {
+  width: 4px;
+  height: 160px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  transform-origin: bottom;
+}
