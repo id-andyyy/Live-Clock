@@ -7,8 +7,8 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: rgb(148, 157, 92);
-  background: radial-gradient(circle, rgba(148, 157, 92, 1) 0%, rgba(0, 0, 0, 1) 55%);
+  background: rgb(180, 194, 92);
+  background: radial-gradient(circle, rgba(180, 194, 92, 1) 0%, rgba(0, 0, 0, 1) 45%);
 }
 
 .clock {
@@ -20,7 +20,7 @@
 }
 
 .clock__hand {
-  width: calc(var(--clock-size) / 60);
+  width: calc(var(--clock-size) / 90);
   position: absolute;
   bottom: 50%;
   left: 50%;
@@ -33,9 +33,25 @@
 }
 
 .clock__hand_minutes {
-  height: calc(var(--clock-size) / 3);
+  height: calc(var(--clock-size) / 3.3);
 }
 
 .clock__hand_seconds {
   height: calc(var(--clock-size) / 2.5);
+  transition: all 0.1s cubic-bezier(0.3, 2.06, 0.58, 1);
+}
+
+.clock__hand_no-animation {
+  transition: none;
+}
+
+.clock__center {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  background: white;
+  border-radius: 50%;
+  transform: translate(0, 50%);
+  width: calc(var(--clock-size) / 90);
+  height: calc(var(--clock-size) / 90);
 }
