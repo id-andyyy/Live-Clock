@@ -1,0 +1,101 @@
+@import "nullstyle";
+
+$clock-big-size: 500px;
+$clock-small-size: 400px;
+
+$clock-hand-width: 3px;
+$clock-hand-hours-height: 75px;
+$clock-hand-minutes-height: 125px;
+$clock-hand-seconds-height: 160px;
+
+@mixin circle-properties($diameter, $leftRotation, $betweenRotation) {
+  width: $diameter;
+  height: $diameter;
+  &::before {
+    transform: rotate($leftRotation);
+  }
+  &::after {
+    transform: rotate($leftRotation + $betweenRotation);
+  }
+}
+
+@mixin circle-position($topIndent, $leftIndent) {
+  position: absolute;
+  top: $topIndent;
+  left: $leftIndent;
+  transform: translate(-50%, -50%);
+}
+
+@mixin clock-hand-position($bottomIndent, $leftIndent) {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(151, 181, 103);
+  background: radial-gradient(circle, rgba(151, 181, 103, 1) 0%, rgba(0, 0, 0, 1) 45%);
+  position: relative;
+}
+
+.circle {
+  position: relative;
+  overflow: hidden;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border: 1px solid;
+    border-radius: 50%;
+  }
+  &::before {
+    border-color: transparent white white white;
+  }
+  &::after {
+    border-color: white transparent transparent;
+  }
+  &:nth-child(3) {
+    @include circle-properties($clock-big-size, 5deg, 36deg);
+    @include circle-position(50%, 50%);
+  }
+  &:nth-child(4) {
+    @include circle-properties($clock-small-size, 135deg - 36deg, 36deg);
+    @include circle-position(50%, 50%);
+  }
+}
+
+.clock {
+  &__hand {
+    width: $clock-hand-width;
+    @include clock-hand-position(50%, 50%);
+    transform-origin: bottom;
+    background: white;
+    &_hours {
+      height: $clock-hand-hours-height;
+    }
+    &_minutes {
+      height: $clock-hand-minutes-height;
+    }
+    &_seconds {
+      height: $clock-hand-seconds-height;
+      transition: all 0.1s cubic-bezier(0.3, 2.06, 0.58, 1);
+    }
+    &_no-animation {
+      transition: none;
+    }
+  }
+  &__center {
+    @include clock-hand-position(50%, 50%);
+    background: white;
+    border-radius: 50%;
+    transform: translate(0, 50%);
+    width: $clock-hand-width;
+    height: $clock-hand-width;
+  }
+}
