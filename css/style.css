@@ -85,16 +85,26 @@ h6 {
   font-weight: inherit;
 }
 
-.circle:nth-of-type(7), .circle:nth-of-type(6), .circle:nth-of-type(5), .circle:nth-of-type(4), .circle:nth-of-type(3), .circle:nth-of-type(2), .circle:nth-of-type(1) {
+.circle:nth-of-type(7), .circle:nth-of-type(6), .circle:nth-of-type(5), .circle:nth-of-type(4), .circle:nth-of-type(3), .circle:nth-of-type(2), .circle:nth-of-type(1), .gradient {
   position: absolute;
   transform: translate(-50%, -50%);
 }
 
 .container {
   height: 100vh;
-  background: rgb(151, 181, 103);
-  background: radial-gradient(circle, rgb(151, 181, 103) 0%, rgb(0, 0, 0) 45%);
+  background: black;
   position: relative;
+}
+
+.gradient {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 100%;
+  background: #97b567;
+  filter: blur(100px);
+  width: 400px;
+  height: 400px;
 }
 
 .circle {
