@@ -31,9 +31,6 @@ $clock-hand-seconds-height: 160px;
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   background: rgb(151, 181, 103);
   background: radial-gradient(circle, rgba(151, 181, 103, 1) 0%, rgba(0, 0, 0, 1) 45%);
@@ -58,47 +55,47 @@ $clock-hand-seconds-height: 160px;
   &::after {
     border-color: white white transparent transparent;
   }
-  &:nth-child(1) {
+  &:nth-of-type(1) {
     @extend %tpl-circle-position;
     @include circle-properties($clock-big-size, 5deg, 36deg);
     top: 50%;
     left: 50%;
   }
-  &:nth-child(2) {
+  &:nth-of-type(2) {
     @extend %tpl-circle-position;
     @include circle-properties($clock-small-size, 135deg - 36deg, 36deg);
     top: 50%;
     left: 50%;
   }
-  &:nth-child(3) {
+  &:nth-of-type(3) {
     @extend %tpl-circle-position;
     @include circle-properties(200px, -95deg, 140deg);
     top: 230px;
     left: 100px;
     filter: opacity(50%);
   }
-  &:nth-child(4) {
+  &:nth-of-type(4) {
     @extend %tpl-circle-position;
     @include circle-properties(150px, 35deg, 108deg);
     bottom: 80px;
     left: 170px;
     filter: opacity(50%);
   }
-  &:nth-child(5) {
+  &:nth-of-type(5) {
     @extend %tpl-circle-position;
     @include circle-properties(120px, -145deg, 160deg);
     top: 40px;
     right: 140px;
     filter: opacity(50%);
   }
-  &:nth-child(6) {
+  &:nth-of-type(6) {
     @extend %tpl-circle-position;
     @include circle-properties(250px, 115deg, 140deg);
     bottom: -100px;
     right: -40px;
     filter: opacity(50%);
   }
-  &:nth-child(7) {
+  &:nth-of-type(7) {
     @extend %tpl-circle-position;
     @include circle-properties(30px, 105deg, 108deg);
     bottom: 400px;
@@ -134,5 +131,34 @@ $clock-hand-seconds-height: 160px;
     transform: translate(0, 50%);
     width: $clock-hand-width;
     height: $clock-hand-width;
+  }
+}
+
+.bling {
+  position: absolute;
+  &:nth-of-type(1) {
+    width: 50px;
+    top: 300px;
+    left: 370px;
+  }
+  &:nth-of-type(2) {
+    width: 15px;
+    top: 40px;
+    left: 250px;
+  }
+  &:nth-of-type(3) {
+    width: 10px;
+    bottom: 240px;
+    left: 140px;
+  }
+  &:nth-of-type(4) {
+    width: 15px;
+    top: 200px;
+    right: 400px;
+  }
+  &:nth-of-type(5) {
+    width: 40px;
+    bottom: 150px;
+    right: 450px;
   }
 }
