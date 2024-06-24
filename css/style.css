@@ -85,6 +85,11 @@ h6 {
   font-weight: inherit;
 }
 
+.circle:nth-child(7), .circle:nth-child(6), .circle:nth-child(5), .circle:nth-child(4), .circle:nth-child(3), .circle:nth-child(2), .circle:nth-child(1) {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -108,38 +113,99 @@ h6 {
   border-radius: 50%;
 }
 .circle::before {
-  border-color: transparent white white white;
+  border-color: transparent transparent white white;
 }
 .circle::after {
-  border-color: white transparent transparent;
+  border-color: white white transparent transparent;
 }
-.circle:nth-child(3) {
+.circle:nth-child(1) {
   width: 500px;
   height: 500px;
-  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 }
-.circle:nth-child(3)::before {
+.circle:nth-child(1)::before {
   transform: rotate(5deg);
 }
-.circle:nth-child(3)::after {
+.circle:nth-child(1)::after {
   transform: rotate(41deg);
 }
-.circle:nth-child(4) {
+.circle:nth-child(2) {
   width: 400px;
   height: 400px;
-  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 }
-.circle:nth-child(4)::before {
+.circle:nth-child(2)::before {
   transform: rotate(99deg);
 }
-.circle:nth-child(4)::after {
+.circle:nth-child(2)::after {
   transform: rotate(135deg);
+}
+.circle:nth-child(3) {
+  width: 200px;
+  height: 200px;
+  top: 230px;
+  left: 100px;
+  filter: opacity(50%);
+}
+.circle:nth-child(3)::before {
+  transform: rotate(-95deg);
+}
+.circle:nth-child(3)::after {
+  transform: rotate(45deg);
+}
+.circle:nth-child(4) {
+  width: 150px;
+  height: 150px;
+  bottom: 80px;
+  left: 170px;
+  filter: opacity(50%);
+}
+.circle:nth-child(4)::before {
+  transform: rotate(35deg);
+}
+.circle:nth-child(4)::after {
+  transform: rotate(143deg);
+}
+.circle:nth-child(5) {
+  width: 120px;
+  height: 120px;
+  top: 40px;
+  right: 140px;
+  filter: opacity(50%);
+}
+.circle:nth-child(5)::before {
+  transform: rotate(-145deg);
+}
+.circle:nth-child(5)::after {
+  transform: rotate(15deg);
+}
+.circle:nth-child(6) {
+  width: 250px;
+  height: 250px;
+  bottom: -100px;
+  right: -40px;
+  filter: opacity(50%);
+}
+.circle:nth-child(6)::before {
+  transform: rotate(115deg);
+}
+.circle:nth-child(6)::after {
+  transform: rotate(255deg);
+}
+.circle:nth-child(7) {
+  width: 30px;
+  height: 30px;
+  bottom: 400px;
+  right: 30px;
+  filter: opacity(50%);
+}
+.circle:nth-child(7)::before {
+  transform: rotate(105deg);
+}
+.circle:nth-child(7)::after {
+  transform: rotate(213deg);
 }
 
 .clock__hand {
