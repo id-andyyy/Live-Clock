@@ -89,6 +89,7 @@ h6 {
   height: 100vh;
   background: black;
   position: relative;
+  overflow: hidden;
 }
 
 .gradient {

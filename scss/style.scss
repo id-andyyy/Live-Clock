@@ -23,6 +23,7 @@ $clock-hand-seconds-height: 160px;
   height: 100vh;
   background: black;
   position: relative;
+  overflow: hidden;
 }
 
 .gradient {
