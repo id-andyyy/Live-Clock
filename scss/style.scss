@@ -15,6 +15,14 @@
   @return calc(#{$min-value + px} + (($max-value - $min-value) * ((100vw - 320px) / (1280 - 320))));
 }
 
+@function percentage-value($dimension, $value) {
+  @if $dimension == width {
+    @return calc($value / 1280 * 100%);
+  } @else {
+    @return calc($value / 832 * 100%);
+  }
+}
+
 .container {
   height: 100vh;
   background: black;
@@ -30,8 +38,8 @@
   border-radius: 100%;
   background: #97b567;
   filter: blur(adaptive-value(100, 60));
-  width: adaptive-value(473, 240);
-  height: adaptive-value(473, 240);
+  width: 70vmin;
+  height: 70vmin;
 }
 
 .circle {
@@ -53,14 +61,18 @@
     border-color: white white transparent transparent;
   }
   &:nth-of-type(1) {
-    @include circle-properties(adaptive-value(500, 254), 5deg, 36deg);
+    @include circle-properties(unset, 5deg, 36deg);
+    width: 75vmin;
+    height: 75vmin;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
   }
   &:nth-of-type(2) {
-    @include circle-properties(adaptive-value(400, 205), 135deg - 36deg, 36deg);
+    @include circle-properties(unset, 135deg - 36deg, 36deg);
+    width: 60vmin;
+    height: 60vmin;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -69,22 +81,22 @@
   &:nth-of-type(3) {
     @include circle-properties(adaptive-value(205, 76), -95deg, 140deg);
     position: absolute;
-    top: adaptive-value(168, 47);
-    left: adaptive-value(-42, -30);
+    top: percentage-value(height, 110);
+    left: percentage-value(width, -42);
     filter: opacity(50%);
   }
   &:nth-of-type(4) {
     @include circle-properties(adaptive-value(150, 73), 35deg, 108deg);
     position: absolute;
-    bottom: adaptive-value(107, 23);
-    left: adaptive-value(95, 15);
+    bottom: percentage-value(height, 107);
+    left: percentage-value(width, 95);
     filter: opacity(50%);
   }
   &:nth-of-type(5) {
     @include circle-properties(adaptive-value(121, 64), -145deg, 160deg);
     position: absolute;
-    top: -8px;
-    right: adaptive-value(117, 20);
+    top: percentage-value(height, -35);
+    right: percentage-value(width, 117);
     filter: opacity(50%);
   }
   &:nth-of-type(6) {
@@ -100,9 +112,46 @@
   &:nth-of-type(7) {
     @include circle-properties(adaptive-value(252, 103), 115deg, 140deg);
     position: absolute;
-    bottom: adaptive-value(-60, -11);
-    right: adaptive-value(51, 25);
+    bottom: percentage-value(height, -60);
+    right: percentage-value(width, 51);
     filter: opacity(50%);
+  }
+}
+
+.bling {
+  position: absolute;
+  &:nth-of-type(1) {
+    width: adaptive-value(51, 30);
+    top: percentage-value(height, 209);
+    left: percentage-value(width, 282);
+  }
+  &:nth-of-type(2) {
+    width: adaptive-value(15, 10);
+    top: percentage-value(height, 37);
+    left: percentage-value(width, 172);
+  }
+  &:nth-of-type(3) {
+    width: adaptive-value(10, 6);
+    bottom: percentage-value(height, 170);
+    left: percentage-value(width, 177);
+  }
+  &:nth-of-type(4) {
+    width: adaptive-value(15, 10);
+    top: percentage-value(height, 180);
+    right: percentage-value(width, 351);
+  }
+  &:nth-of-type(5) {
+    width: adaptive-value(37, 25);
+    bottom: percentage-value(height, 148);
+    right: percentage-value(width, 358);
+  }
+  &:nth-of-type(6) {
+    @media (max-width: 1023px) {
+      display: none;
+    }
+    width: 23px;
+    bottom: 92px;
+    right: 108px;
   }
 }
 
@@ -117,13 +166,13 @@ $clock-hand-width: adaptive-value(3, 2);
     transform-origin: bottom;
     background: white;
     &_hours {
-      height: adaptive-value(75, 41);
+      height: calc(60vmin / 7);
     }
     &_minutes {
-      height: adaptive-value(125, 62);
+      height: calc(60vmin / 3.5);
     }
     &_seconds {
-      height: adaptive-value(160, 78);
+      height: calc(60vmin / 2.5);
       transition: all 0.1s cubic-bezier(0.3, 2.06, 0.58, 1);
     }
     &_no-animation {
@@ -139,42 +188,5 @@ $clock-hand-width: adaptive-value(3, 2);
     transform: translate(0, 50%);
     width: $clock-hand-width;
     height: $clock-hand-width;
-  }
-}
-
-.bling {
-  position: absolute;
-  &:nth-of-type(1) {
-    width: adaptive-value(51, 30);
-    top: adaptive-value(209, 107);
-    left: adaptive-value(282, 76);
-  }
-  &:nth-of-type(2) {
-    width: adaptive-value(15, 10);
-    top: adaptive-value(37, 24);
-    left: adaptive-value(172, 41);
-  }
-  &:nth-of-type(3) {
-    width: adaptive-value(10, 6);
-    bottom: adaptive-value(194, 61);
-    left: adaptive-value(138, 42);
-  }
-  &:nth-of-type(4) {
-    width: adaptive-value(15, 10);
-    top: adaptive-value(180, 149);
-    right: adaptive-value(351, 40);
-  }
-  &:nth-of-type(5) {
-    width: adaptive-value(37, 25);
-    bottom: adaptive-value(148, 103);
-    right: adaptive-value(358, 65);
-  }
-  &:nth-of-type(6) {
-    @media (max-width: 1023px) {
-      display: none;
-    }
-    width: 23px;
-    bottom: 92px;
-    right: 108px;
   }
 }
