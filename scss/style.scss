@@ -1,13 +1,5 @@
 @import "nullstyle";
 
-$clock-big-size: 500px;
-$clock-small-size: 400px;
-
-$clock-hand-width: 3px;
-$clock-hand-hours-height: 75px;
-$clock-hand-minutes-height: 125px;
-$clock-hand-seconds-height: 160px;
-
 @mixin circle-properties($diameter, $leftRotation, $betweenRotation) {
   width: $diameter;
   height: $diameter;
@@ -17,6 +9,10 @@ $clock-hand-seconds-height: 160px;
   &::after {
     transform: rotate($leftRotation + $betweenRotation);
   }
+}
+
+@function adaptive-value($max-value, $min-value) {
+  @return calc(#{$min-value + px} + (($max-value - $min-value) * ((100vw - 320px) / (1280 - 320))));
 }
 
 .container {
@@ -33,13 +29,13 @@ $clock-hand-seconds-height: 160px;
   left: 50%;
   border-radius: 100%;
   background: #97b567;
-  filter: blur(100px);
-  width: 400px;
-  height: 400px;
+  filter: blur(adaptive-value(100, 60));
+  width: adaptive-value(473, 240);
+  height: adaptive-value(473, 240);
 }
 
 .circle {
-  position: relative;
+  // position: relative;
   overflow: hidden;
   &::before,
   &::after {
@@ -57,41 +53,44 @@ $clock-hand-seconds-height: 160px;
     border-color: white white transparent transparent;
   }
   &:nth-of-type(1) {
-    @include circle-properties($clock-big-size, 5deg, 36deg);
+    @include circle-properties(adaptive-value(500, 254), 5deg, 36deg);
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
   }
   &:nth-of-type(2) {
-    @include circle-properties($clock-small-size, 135deg - 36deg, 36deg);
+    @include circle-properties(adaptive-value(400, 205), 135deg - 36deg, 36deg);
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
   }
   &:nth-of-type(3) {
-    @include circle-properties(205px, -95deg, 140deg);
+    @include circle-properties(adaptive-value(205, 76), -95deg, 140deg);
     position: absolute;
-    top: 168px;
-    left: -42px;
+    top: adaptive-value(168, 47);
+    left: adaptive-value(-42, -30);
     filter: opacity(50%);
   }
   &:nth-of-type(4) {
-    @include circle-properties(150px, 35deg, 108deg);
+    @include circle-properties(adaptive-value(150, 73), 35deg, 108deg);
     position: absolute;
-    bottom: 107px;
-    left: 95px;
+    bottom: adaptive-value(107, 23);
+    left: adaptive-value(95, 15);
     filter: opacity(50%);
   }
   &:nth-of-type(5) {
-    @include circle-properties(121px, -145deg, 160deg);
+    @include circle-properties(adaptive-value(121, 64), -145deg, 160deg);
     position: absolute;
     top: -8px;
-    right: 117px;
+    right: adaptive-value(117, 20);
     filter: opacity(50%);
   }
   &:nth-of-type(6) {
+    @media (max-width: 1023px) {
+      display: none;
+    }
     @include circle-properties(37px, 105deg, 108deg);
     position: absolute;
     bottom: 318px;
@@ -99,13 +98,15 @@ $clock-hand-seconds-height: 160px;
     filter: opacity(50%);
   }
   &:nth-of-type(7) {
-    @include circle-properties(252px, 115deg, 140deg);
+    @include circle-properties(adaptive-value(252, 103), 115deg, 140deg);
     position: absolute;
-    bottom: -60px;
-    right: 51px;
+    bottom: adaptive-value(-60, -11);
+    right: adaptive-value(51, 25);
     filter: opacity(50%);
   }
 }
+
+$clock-hand-width: adaptive-value(3, 2);
 
 .clock {
   &__hand {
@@ -116,13 +117,13 @@ $clock-hand-seconds-height: 160px;
     transform-origin: bottom;
     background: white;
     &_hours {
-      height: $clock-hand-hours-height;
+      height: adaptive-value(75, 41);
     }
     &_minutes {
-      height: $clock-hand-minutes-height;
+      height: adaptive-value(125, 62);
     }
     &_seconds {
-      height: $clock-hand-seconds-height;
+      height: adaptive-value(160, 78);
       transition: all 0.1s cubic-bezier(0.3, 2.06, 0.58, 1);
     }
     &_no-animation {
@@ -144,28 +145,36 @@ $clock-hand-seconds-height: 160px;
 .bling {
   position: absolute;
   &:nth-of-type(1) {
-    width: 51px;
-    top: 209px;
-    left: 282px;
+    width: adaptive-value(51, 30);
+    top: adaptive-value(209, 107);
+    left: adaptive-value(282, 76);
   }
   &:nth-of-type(2) {
-    width: 15px;
-    top: 37px;
-    left: 172px;
+    width: adaptive-value(15, 10);
+    top: adaptive-value(37, 24);
+    left: adaptive-value(172, 41);
   }
   &:nth-of-type(3) {
-    width: 10px;
-    bottom: 194px;
-    left: 138px;
+    width: adaptive-value(10, 6);
+    bottom: adaptive-value(194, 61);
+    left: adaptive-value(138, 42);
   }
   &:nth-of-type(4) {
-    width: 15px;
-    top: 180px;
-    right: 351px;
+    width: adaptive-value(15, 10);
+    top: adaptive-value(180, 149);
+    right: adaptive-value(351, 40);
   }
   &:nth-of-type(5) {
-    width: 37px;
-    bottom: 148px;
-    right: 358px;
+    width: adaptive-value(37, 25);
+    bottom: adaptive-value(148, 103);
+    right: adaptive-value(358, 65);
+  }
+  &:nth-of-type(6) {
+    @media (max-width: 1023px) {
+      display: none;
+    }
+    width: 23px;
+    bottom: 92px;
+    right: 108px;
   }
 }
