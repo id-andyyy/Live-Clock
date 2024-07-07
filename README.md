@@ -2,7 +2,7 @@
 
 # Live Clock :clock5:
 
-A simple space-themed website with a clock showing real time :sparkles:. The site is adapted to all types of devices. :iphone:
+A simple minimalistic website with a clock showing the current time :sparkles:. The site is adapted to all types of devices. :iphone:
 
 ## Screenshots
 
@@ -25,10 +25,11 @@ Features:
 - Fully responsive design adapting to all devices
 - BEM methodology
 - Vanilla JavaScript
+- Meta tags are specified
 
 ## Feedback
 
-I would appreciate it if you give a star :star:. If you find a bug or have a suggestion, use the Issues section.
+I would appreciate it if you give a star :star:. If you find a bug or have a suggestion, use the [Issues](https://github.com/id-andyyy/Live-Clock/issues) section.
 
 ## Acknowledgments
 
