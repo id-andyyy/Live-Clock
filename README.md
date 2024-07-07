@@ -2,11 +2,11 @@
 
 # Live Clock :clock5:
 
-A simple space-themed website featuring a live clock displaying real-time. :sparkles: The site is fully responsive, catering to all types of devices. :iphone:
+A simple space-themed website with a clock showing real time :sparkles:. The site is adapted to all types of devices. :iphone:
 
 ## Screenshots
 
-Visit the [website](https://id-andyyy.github.io/Live-Clock/) or see the demo below :point_down:
+Visit [website](https://id-andyyy.github.io/Live-Clock/) or watch the demo :point_down:
 
 [![Demo gif](assets/readme/demo.gif)](https://id-andyyy.github.io/Live-Clock/)
 
@@ -20,7 +20,7 @@ Visit the [website](https://id-andyyy.github.io/Live-Clock/) or see the demo bel
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white&color=f14e32)
 
 Features:
-- Utilizes SCSS capabilities for responsive calculations ([see code](https://gist.github.com/id-andyyy/92bffcaa37c60c395324fe26b1a518d6))
+- Utilizes a special technique for calculating responsive values ([see code](https://gist.github.com/id-andyyy/92bffcaa37c60c395324fe26b1a518d6))
 - Includes `circle-properties` function for creating customizable semi-circles ([see code](scss/style.scss))
 - Fully responsive design adapting to all devices
 - BEM methodology
@@ -28,10 +28,10 @@ Features:
 
 ## Feedback
 
-Would appreciate a star if you find it useful! :star: For bugs or suggestions, please use the Issues section.
+I would appreciate it if you give a star :star:. If you find a bug or have a suggestion, use the Issues section.
 
 ## Acknowledgments
 
-Thanks to [strawberry2892](https://github.com/strawberry2892) for the website layout. :strawberry: Created as part of the [JavaScript30](https://javascript30.com/) challenge.
+Thanks to [strawberry2892 :strawberry:](https://github.com/strawberry2892) for creating the layout of the site. The site was created as part of the [JavaScript30](https://javascript30.com/) challenge.
 
 Read in [Russian :ru:](README-ru.md)
