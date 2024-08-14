@@ -1,14 +1,16 @@
-![Live Clock](assets/readme/art.png)
+![Арт](https://i.postimg.cc/vHVs1Dkj/art.png)
 
-# Live Clock :clock5:
+# Live Clock&nbsp;:clock5:
 
-Простой сайт в стиле минимализм с часами, показывающими текущее время :sparkles:. Сайт адаптирован под все типы устройств :iphone:
+Простой сайт в стиле минимализм с часами, показывающими текущее время&nbsp;:sparkles:. Сайт адаптирован под все типы устройств&nbsp;:iphone:.
 
-## Скриншоты
+## Демонстрация
 
-Посетите [сайт](https://id-andyyy.github.io/Live-Clock/) или посмотрите демонстрацию :point_down:
+Посетите [сайт](https://id-andyyy.github.io/Live-Clock/) или посмотрите демонстрацию&nbsp;:point_down:
 
-[![Demo gif](assets/readme/demo.gif)](https://id-andyyy.github.io/Live-Clock/)
+<div class="thumb-wrap" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+  <iframe src="https://www.youtube.com/embed/FwWe7pnV1_M?si=YnSE_9VRratmvqXz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-width:0;outline-width:0;"></iframe>
+</div>
 
 ## Технологии и инструменты
 
@@ -24,15 +26,15 @@
 - Используется функция `circle-properties`, которая создаёт красивые настраиваемые полукольца ([смотреть код](scss/style.scss))
 - Адаптивная вёрстка подстраивается под любое устройство
 - БЭМ методология
-- Чистый JS
+- Чистый&nbsp;JS
 - Указаны мета-теги
 
 ## Обратная связь
 
-Буду признателен, если вы поставите звезду :star:. Если вы нашли баг или у вас есть предложение, используйте раздел [Issues](https://github.com/id-andyyy/Live-Clock/issues).
+Буду признателен, если вы поставите звезду&nbsp;:star:. Если вы нашли баг или у вас есть предложения по улучшению, используйте раздел [Issues](https://github.com/id-andyyy/Live-Clock/issues).
 
 ## Благодарности
 
-Благодарность за создание макета сайта [strawberry2892 :strawberry:](https://github.com/strawberry2892). Сайт создан в рамках челленджа [JavaScript30](https://javascript30.com/).
+Благодарность за создание макета сайта [strawberry2892&nbsp;:strawberry:](https://github.com/strawberry2892). Сайт создан в рамках челленджа [JavaScript30](https://javascript30.com/).
 
-Читать на [английском :uk:](README.md)
+Читать на [английском&nbsp;:uk:](README.md)
