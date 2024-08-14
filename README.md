@@ -1,12 +1,12 @@
 ![Art](https://i.postimg.cc/vHVs1Dkj/art.png)
 
-# Live Clock&nbsp;:clock5:
+# Live Clock&nbsp;&#128340;
 
-A simple minimalistic website with a clock showing the current time&nbsp;:sparkles:. The site is adapted to all types of devices&nbsp;:iphone:.
+A simple minimalistic website with a clock showing the current time&nbsp;&#10024;. The site is adapted to all types of devices&nbsp;&#128241;.
 
 ## Demonstration
 
-Visit [website](https://id-andyyy.github.io/Live-Clock/) or watch the demo&nbsp;:point_down:
+Visit [website](https://id-andyyy.github.io/Live-Clock/) or watch the demo&nbsp;&#128071;
 
 <div class="thumb-wrap" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
   <iframe src="https://www.youtube.com/embed/FwWe7pnV1_M?si=YnSE_9VRratmvqXz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-width:0;outline-width:0;"></iframe>
@@ -31,10 +31,11 @@ Features:
 
 ## Feedback
 
-I would appreciate it if you give a star&nbsp;:star:. If you find a bug or have suggestions for improvement, use the [Issues](https://github.com/id-andyyy/Live-Clock/issues) section.
+I would appreciate it if you give a star&nbsp;&#11088;. If you find a bug or have suggestions for improvement, use the [Issues](https://github.com/id-andyyy/Live-Clock/issues) section.
 
 ## Acknowledgments
 
-Thanks to [strawberry2892&nbsp;:strawberry:](https://github.com/strawberry2892) for creating the layout of the site. The site was created as part of the [JavaScript30](https://javascript30.com/) challenge.
+Thanks to [strawberry2892&nbsp;&#127827;](https://github.com/strawberry2892) for creating the layout of the site. The site was created as part of the [JavaScript30](https://javascript30.com/) challenge.
 
-Read in [Russian&nbsp;:ru:](README-ru.md)
+Read in [Russian&nbsp;&#127479;&#127482;
+](README-ru.md)
