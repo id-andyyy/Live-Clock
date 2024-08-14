@@ -1,12 +1,12 @@
 ![Арт](https://i.postimg.cc/vHVs1Dkj/art.png)
 
-# Live Clock&nbsp;:clock5:
+# Live Clock&nbsp;&#128340;
 
-Простой сайт в стиле минимализм с часами, показывающими текущее время&nbsp;:sparkles:. Сайт адаптирован под все типы устройств&nbsp;:iphone:.
+Простой сайт в стиле минимализм с часами, показывающими текущее время&nbsp;&#10024;. Сайт адаптирован под все типы устройств&nbsp;&#128241;.
 
 ## Демонстрация
 
-Посетите [сайт](https://id-andyyy.github.io/Live-Clock/) или посмотрите демонстрацию&nbsp;:point_down:
+Посетите [сайт](https://id-andyyy.github.io/Live-Clock/) или посмотрите демонстрацию&nbsp;&#128071;
 
 <div class="thumb-wrap" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
   <iframe src="https://www.youtube.com/embed/FwWe7pnV1_M?si=YnSE_9VRratmvqXz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-width:0;outline-width:0;"></iframe>
@@ -31,10 +31,10 @@
 
 ## Обратная связь
 
-Буду признателен, если вы поставите звезду&nbsp;:star:. Если вы нашли баг или у вас есть предложения по улучшению, используйте раздел [Issues](https://github.com/id-andyyy/Live-Clock/issues).
+Буду признателен, если вы поставите звезду&nbsp;&#11088;. Если вы нашли баг или у вас есть предложения по улучшению, используйте раздел [Issues](https://github.com/id-andyyy/Live-Clock/issues).
 
 ## Благодарности
 
-Благодарность за создание макета сайта [strawberry2892&nbsp;:strawberry:](https://github.com/strawberry2892). Сайт создан в рамках челленджа [JavaScript30](https://javascript30.com/).
+Благодарность за создание макета сайта [strawberry2892&nbsp;&#127827;](https://github.com/strawberry2892). Сайт создан в рамках челленджа [JavaScript30](https://javascript30.com/).
 
-Читать на [английском&nbsp;:uk:](README.md)
+Читать на [английском&nbsp;&#127468;&#127463;](README.md)
