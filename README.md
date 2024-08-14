@@ -35,5 +35,4 @@ I would appreciate it if you give a star&nbsp;&#11088;. If you find a bug or hav
 
 Thanks to [strawberry2892&nbsp;&#127827;](https://github.com/strawberry2892) for creating the layout of the site. The site was created as part of the [JavaScript30](https://javascript30.com/) challenge.
 
-Read in [Russian&nbsp;&#127479;&#127482;
-](README-ru.md)
+Read in [Russian&nbsp;&#127479;&#127482;](README-ru.md)
