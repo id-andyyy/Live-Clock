@@ -1,5 +1,10 @@
 ![Арт](https://i.postimg.cc/vHVs1Dkj/art.png)
 
+![GitHub Created At](https://img.shields.io/github/created-at/id-andyyy/Live-Clock?style=flat&color=%236D8841)
+![Lines Of Code](https://tokei.rs/b1/github/id-andyyy/Live-Clock?style=flat&category=code&)
+![Top Language](https://img.shields.io/github/languages/top/id-andyyy/Live-Clock?style=flat)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fid-andyyy.github.io%2FLive-Clock%2F&style=flat)
+
 # Live Clock&nbsp;&#128340;
 
 Простой сайт в стиле минимализм с часами, показывающими текущее время&nbsp;&#10024;. Сайт адаптирован под все типы устройств&nbsp;&#128241;.
